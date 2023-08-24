@@ -1,0 +1,28 @@
+#content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+img {
+  width: 5rem;
+}
+
+img.github {
+  width: 1rem;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
