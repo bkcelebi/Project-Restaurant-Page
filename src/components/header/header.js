@@ -14,7 +14,7 @@ const header = () => {
   header.appendChild(logo);
 
   header.classList.add("header");
-  logo.innerText = "Mountain";
+  logo.innerText = "Restaurant";
   logo.classList.add("logo");
 
   header.appendChild(nav);

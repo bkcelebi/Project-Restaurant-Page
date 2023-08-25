@@ -26,8 +26,8 @@ body {
   5. Improve text rendering
 */
 body {
-  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-family: "Work Sans", sans-serif;
 }
 /*
   6. Improve media defaults
@@ -37,8 +37,8 @@ picture,
 video,
 canvas,
 svg {
-  /* display: block; */
-  /* max-width: 100%; */
+  display: block;
+  max-width: 100%;
 }
 /*
   7. Remove built-in form typography styles

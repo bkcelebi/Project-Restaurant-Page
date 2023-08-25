@@ -1,0 +1,29 @@
+#content {
+  background: #f1f3f5;
+}
+
+.contactContainer {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.contactInfo {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.map {
+  width: 100%;
+}

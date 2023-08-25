@@ -1,26 +1,22 @@
 import "./home.css";
-import heroImg from "../../assets/header.jpg";
 
 const home = () => {
   const container = document.querySelector("#content");
 
   const hero = document.createElement("div");
-  const img = document.createElement("img");
-  const textContainer = document.createElement("div");
-  const heading = document.createElement("h1");
+  const heading = document.createElement("p");
   const greeting = document.createElement("p");
 
   container.appendChild(hero);
-  hero.appendChild(img);
-  hero.appendChild(textContainer);
-  textContainer.appendChild(heading);
-  textContainer.appendChild(greeting);
+  hero.appendChild(heading);
+  hero.appendChild(greeting);
 
-  heading.innerText = "Welcome!";
+  heading.innerText = "Are you looking for a nice Restaurant?";
   greeting.innerText =
-    "Are you looking for a nice ski Resorts? \n You no longer need to!";
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+
   hero.classList.add("hero");
-  img.src = heroImg;
+  heading.classList.add("heading");
 };
 
 export default home;

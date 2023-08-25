@@ -1,26 +1,45 @@
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
 
-  padding: 1rem;
-  background: white;
-
+  background: black;
+  color: white;
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .logo {
-  border-radius: 0.3rem;
-  margin-left: 1rem;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
   font-size: 1.5rem;
 }
 
 nav {
   display: flex;
-  gap: 0.5rem;
-  margin-right: 1rem;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
 }
 
 nav a {
   cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  .logo,
+  nav {
+    margin: 0;
+  }
+
+  nav {
+    gap: 1rem;
+  }
 }
