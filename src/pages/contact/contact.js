@@ -4,6 +4,7 @@ import Map from "../../assets/contact.png";
 const contact = () => {
   const container = document.querySelector("#content");
 
+  const wrapper = document.createElement("div");
   const contactContainer = document.createElement("div");
   const contact = document.createElement("div");
   const contactInfo = document.createElement("div");
@@ -11,7 +12,8 @@ const contact = () => {
   const tel = document.createElement("p");
   const address = document.createElement("p");
 
-  container.appendChild(contactContainer);
+  container.appendChild(wrapper);
+  wrapper.appendChild(contactContainer);
   contactContainer.appendChild(contact);
   contact.appendChild(contactInfo);
   contact.appendChild(map);
@@ -22,6 +24,7 @@ const contact = () => {
   contactInfo.classList.add("contactInfo");
   contactContainer.classList.add("contactContainer");
   map.classList.add("map");
+  wrapper.classList.add("wrapper");
 
   map.src = Map;
   tel.innerText = "Phone: 0123456789";

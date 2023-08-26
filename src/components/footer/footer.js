@@ -12,22 +12,21 @@ const footer = () => {
   const github = document.createElement("img");
 
   container.appendChild(footer);
-
   footer.appendChild(copyright);
   footer.appendChild(footerLogo);
+  footerLogo.appendChild(logo);
+  footerLogo.appendChild(github);
+
+  github.classList.add("github");
 
   const time = new Date().getFullYear();
   copyright.innerText = `Copyright © ${time}`;
 
   github.src = Github;
   logo.src = FooterLogo;
-  footerLogo.appendChild(logo);
-  footerLogo.appendChild(github);
 
   footerLogo.href = "https://github.com/bkcelebi";
   footerLogo.target = "_blank";
-
-  github.classList.add("github");
 };
 
 export default footer;

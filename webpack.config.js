@@ -1,14 +1,23 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-// const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: {
     index: "./src/index.js",
   },
   devtool: "inline-source-map",
-  plugins: [new HtmlWebpackPlugin({ template: "./src/template.html" })],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/template.html",
+      favicon: "./src/assets/favicon.ico",
+      // filename: "[name].[contenthash].html",
+    }),
+    new MiniCssExtractPlugin({ filename: "[name].[contenthash].css" }),
+  ],
   output: {
     filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "dist"),
@@ -18,11 +27,11 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        test: /\.(sa|sc|c)ss$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
         type: "asset/resource",
       },
       {
@@ -30,5 +39,8 @@ module.exports = {
         use: ["html-loader"],
       },
     ],
+  },
+  optimization: {
+    minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
   },
 };

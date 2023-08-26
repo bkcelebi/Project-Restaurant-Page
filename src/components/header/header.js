@@ -13,6 +13,10 @@ const header = () => {
   container.appendChild(header);
   header.appendChild(logo);
 
+  homeLink.classList.add("homeLink");
+  menuLink.classList.add("menuLink");
+  contactLink.classList.add("contactLink");
+
   header.classList.add("header");
   logo.innerText = "Restaurant";
   logo.classList.add("logo");

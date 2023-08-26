@@ -1,0 +1,61 @@
+.menu {
+  padding: 2rem;
+  display: grid;
+  gap: 2rem;
+  max-width: 1000px;
+}
+
+.itemWrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  border-radius: 0.2rem;
+  overflow: hidden;
+  background: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 5px 13px 6px;
+}
+
+.infoWrapper {
+  padding: 1rem;
+}
+
+.itemTitle {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.itemDesc,
+.itemPrice {
+  margin-top: 0.3rem;
+}
+
+.itemDesc {
+  font-size: 0.9rem;
+}
+
+.itemPrice {
+  font-size: 0.8rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.itemImg {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 460px) {
+  .infoWrapper {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .menu {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pizzaWrapper {
+    display: grid;
+    justify-content: center;
+  }
+}

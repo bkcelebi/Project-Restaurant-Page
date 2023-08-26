@@ -2,7 +2,7 @@
   background: no-repeat linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url(../../assets/header.jpg);
   background-size: cover;
-  padding: 10rem 2rem 12rem 2rem;
+  padding: 8rem 2rem 12rem 2rem;
   color: white;
   text-align: justify;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 5px 13px 6px;
@@ -22,7 +22,7 @@
 
 @media (min-width: 460px) {
   .hero {
-    padding: 10rem 2rem 15rem 2rem;
+    padding: 9rem 2rem 14rem 2rem;
   }
 }
 
@@ -34,7 +34,7 @@
 
 @media (min-width: 1000px) {
   .hero {
-    padding: 10rem 0 15rem 10rem;
+    padding: 10rem 0 16rem 10rem;
   }
 }
 
